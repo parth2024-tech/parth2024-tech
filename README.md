@@ -17,7 +17,7 @@ Software & Security Engineer focused on **Cybersecurity Engineering**, **Applied
 | [**Network Intrusion Detection System**](https://github.com/parth2024-tech/network-intrusion-detection-system) | Python, Scikit-learn, Pandas, CICIDS2017 | Anomaly detection and classification pipeline benchmarked on the CICIDS2017 intrusion dataset with reproducible training pipelines. |
 | [**Amazon ML Solution**](https://github.com/parth2024-tech/Amazon-ML) | Python, LightGBM, XGBoost, Parquet | Large-scale 1.73M entity resolution pipeline with 16-channel blocking, 49 pairwise features, and hybrid gradient-boosted ensemble. |
 | [**Delta Sync Engine**](https://github.com/parth2024-tech/delta-sync-engine) | TypeScript, Bun, Drizzle ORM, Docker | Real-time state synchronization engine with delta compression, optimistic updates, and SQLite/PostgreSQL persistence. |
-| [**Sentinel Telemetry Engine**](https://github.com/parth2024-tech/-Sentinel) | TypeScript, Vite, Vitest, Zod | Industrial-grade system diagnostics and security posture evaluation engine with deterministic test coverage. |
+| [**Sentinel Telemetry Engine**](https://github.com/parth2024-tech/sentinel) | TypeScript, Vite, Vitest, Zod | Industrial-grade system diagnostics and security posture evaluation engine with deterministic test coverage. |
 
 ---
 
