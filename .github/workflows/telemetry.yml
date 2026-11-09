@@ -40,5 +40,6 @@ jobs:
             echo "No telemetry changes to commit."
           else
             git commit -m "chore(telemetry): update live profile telemetry card"
+            git pull --rebase origin main
             git push
           fi
