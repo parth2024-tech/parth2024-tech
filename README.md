@@ -4,6 +4,51 @@ Software & security engineer focused on defensive cybersecurity systems, host te
 
 [Email](mailto:parthgupta.contact@gmail.com) · [LinkedIn](https://linkedin.com) · [Live Portfolio](https://body-explorer-kappa.vercel.app) · [GitHub](https://github.com/parth2024-tech)
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Commits-SSH%20Signed%20%28ed25519%29-3fb950?style=flat-square&logo=git" alt="SSH Signed Commits" />
+  <img src="https://img.shields.io/badge/CI%2FCD-Automated%20%26%20Deterministic-2ea043?style=flat-square&logo=githubactions" alt="Deterministic CI" />
+  <img src="https://img.shields.io/badge/Security-Defensive%20by%20Default-58a6ff?style=flat-square" alt="Defensive Security" />
+  <img src="https://img.shields.io/badge/Typing-Strict%20Zod%20%7C%20Mypy-blueviolet?style=flat-square" alt="Strict Typing" />
+</p>
+
+<p align="center">
+  <img src="./assets/telemetry.svg" alt="System Telemetry Status" width="100%" />
+</p>
+
+---
+
+### Systems Architecture Topology
+
+The map below illustrates how core host telemetry, threat intelligence ingestion, anomaly classification, and distributed data pipelines connect across my engineering work:
+
+```mermaid
+flowchart LR
+    subgraph Ingestion ["Telemetry & Feeds Layer"]
+        A["Sentinel<br/>(Local Host Telemetry & Diagnostics)"]
+        B["Cyberversity Tracker<br/>(Threat Intel & CVE Feeds Ingestion)"]
+    end
+
+    subgraph Core ["Processing & Normalization"]
+        C["Decoupled Event Vault<br/>(PostgreSQL / SQLite / Schema Enforcement)"]
+    end
+
+    subgraph Analysis ["Classification & Sync"]
+        D["NIDS Pipeline<br/>(Anomaly Detection & Flow Classifier)"]
+        E["Delta Sync Engine<br/>(Real-Time State Convergence & Wire Protocol)"]
+        F["Entity Matching Engine<br/>(High-Throughput Chunked Blocking)"]
+    end
+
+    A -->|Thermal & Pressure Metrics| C
+    B -->|Normalized Threat Records| C
+    C -->|High-Cardinality Flows| D
+    C -->|State Convergence| E
+    C -->|Pairwise Features| F
+
+    classDef default fill:#161b22,stroke:#30363d,stroke-width:1px,color:#c9d1d9;
+    classDef core fill:#0d1117,stroke:#58a6ff,stroke-width:2px,color:#58a6ff;
+    class C core;
+```
+
 ---
 
 ### Overview

@@ -1,0 +1,44 @@
+name: Sync Profile Telemetry
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at 00:00 UTC
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-telemetry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate Telemetry SVG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/generate_telemetry.py
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/telemetry.svg
+          if git diff --staged --quiet; then
+            echo "No telemetry changes to commit."
+          else
+            git commit -m "chore(telemetry): update live profile telemetry card"
+            git push
+          fi
